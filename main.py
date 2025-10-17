@@ -5,7 +5,7 @@ def count_characters(text):
     other_chars = 0
 
     for char in text:
-        if char.isalpha():  # 判断是否是字母
+        if char.isascii() and char.isalpha():  # 判断是否是英文字符（只限ASCII范围内的字母）
             english_chars += 1
         elif char.isdigit():  # 判断是否是数字
             digits += 1
