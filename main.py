@@ -1,6 +1,6 @@
 # 从键盘输入一行字符
 text = input()
-dscds132  *&……
+jkkll321  #￥%#
 # 初始化计数器
 english_chars = 0
 digits = 0
