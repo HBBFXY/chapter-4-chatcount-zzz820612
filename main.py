@@ -5,23 +5,22 @@ def count_characters(text):
     other_chars = 0
 
     for char in text:
-        if char.isalpha():
+        if char.isalpha():  # 判断是否是字母
             english_chars += 1
-        elif char.isdigit():
+        elif char.isdigit():  # 判断是否是数字
             digits += 1
-        elif char.isspace():
+        elif char.isspace():  # 判断是否是空格
             spaces += 1
-        else:
+        else:  # 其他字符
             other_chars += 1
     
     return english_chars, digits, spaces, other_chars
 
-
 if __name__ == "__main__":
-    text = input()  # 直接读取输入，不添加提示信息
+    text = input()  # 从键盘输入一行字符
     english_chars, digits, spaces, other_chars = count_characters(text)
 
-    # 输出格式调整为符合预期
+    # 输出结果
     print(f"英文字符: {english_chars}")
     print(f"数字: {digits}")
     print(f"空格: {spaces}")
