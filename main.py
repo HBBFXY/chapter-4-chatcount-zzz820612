@@ -1,5 +1,3 @@
-# main.py
-
 def count_characters(text):
     english_chars = 0
     digits = 0
@@ -20,9 +18,10 @@ def count_characters(text):
 
 
 if __name__ == "__main__":
-    text = input("Enter text: ")  # 用于输入的提示
+    text = input()  # 直接读取输入，不添加提示信息
     english_chars, digits, spaces, other_chars = count_characters(text)
 
+    # 输出格式调整为符合预期
     print(f"英文字符: {english_chars}")
     print(f"数字: {digits}")
     print(f"空格: {spaces}")
