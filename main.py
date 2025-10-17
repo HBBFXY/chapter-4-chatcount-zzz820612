@@ -1,5 +1,5 @@
 # 从键盘输入一行字符
-text = input("ssdfg123  @#￥%：")
+text = input("请输入一段字符：sdfgg534  @#￥%")
 
 # 初始化计数器
 english_chars = 0
