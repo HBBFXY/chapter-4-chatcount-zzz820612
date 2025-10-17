@@ -9,7 +9,8 @@ others = 0     # 其他字符计数器
 
 # 遍历每个字符进行统计
 for char in s:
-    if char.isalpha():
+    # 仅当字符是a-z或A-Z时才视为英文字符
+    if 'a' <= char <= 'z' or 'A' <= char <= 'Z':
         letters += 1
     elif char.isdigit():
         digits += 1
