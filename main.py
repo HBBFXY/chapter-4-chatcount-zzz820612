@@ -1,29 +1,29 @@
-# 从键盘输入一行字符
-s = input()
+# 初始化各类型字符计数器
+letter_count = 0    # 英文字符计数
+digit_count = 0     # 数字计数
+space_count = 0     # 空格计数
+other_count = 0     # 其他字符计数
 
-# 初始化计数器
-letters = 0    # 英文字符计数器
-digits = 0     # 数字计数器
-spaces = 0     # 空格计数器
-others = 0     # 其他字符计数器
+# 获取用户输入
+user_input = input()
 
-# 遍历每个字符进行统计
-for char in s:
-    # 仅当字符是a-z或A-Z时才视为英文字符
-    if 'a' <= char <= 'z' or 'A' <= char <= 'Z':
-        letters += 1
-    # 数字仅统计0-9
-    elif '0' <= char <= '9':
-        digits += 1
-    # 空格仅统计半角空格
-    elif char == ' ':
-        spaces += 1
-    # 其他所有字符
+# 遍历输入字符串中的每个字符
+for char in user_input:
+    if char.isalpha():
+        # 英文字符（a-z, A-Z）
+        letter_count += 1
+    elif char.isdigit():
+        # 数字字符（0-9）
+        digit_count += 1
+    elif char.isspace():
+        # 空格字符
+        space_count += 1
     else:
-        others += 1
+        # 其他字符（中文、标点符号等）
+        other_count += 1
 
-# 按照要求的格式输出结果
-print(f"英文字符: {letters}")
-print(f"数字: {digits}")
-print(f"空格: {spaces}")
-print(f"其他字符: {others}")
+# 按照指定格式输出结果
+print(f"英文字符: {letter_count}")
+print(f"数字: {digit_count}")
+print(f"空格: {space_count}")
+print(f"其他字符: {other_count}")
