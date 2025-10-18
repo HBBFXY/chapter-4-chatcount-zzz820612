@@ -1,29 +1,25 @@
-# 初始化各类型字符计数器
-letter_count = 0    # 英文字符计数
-digit_count = 0     # 数字计数
-space_count = 0     # 空格计数
-other_count = 0     # 其他字符计数
+# 初始化各类字符的计数器
+letters = 0
+digits = 0
+spaces = 0
+others = 0
 
-# 获取用户输入
-user_input = input()
+# 获取用户输入的一行字符
+s = input()
 
-# 遍历输入字符串中的每个字符
-for char in user_input:
+# 遍历输入的字符串，统计各类字符数量
+for char in s:
     if char.isalpha():
-        # 英文字符（a-z, A-Z）
-        letter_count += 1
+        letters += 1
     elif char.isdigit():
-        # 数字字符（0-9）
-        digit_count += 1
+        digits += 1
     elif char.isspace():
-        # 空格字符
-        space_count += 1
+        spaces += 1
     else:
-        # 其他字符（中文、标点符号等）
-        other_count += 1
+        others += 1
 
-# 按照指定格式输出结果
-print(f"英文字符: {letter_count}")
-print(f"数字: {digit_count}")
-print(f"空格: {space_count}")
-print(f"其他字符: {other_count}")
+# 按照要求的格式输出结果
+print(f"英文字符: {letters}")
+print(f"数字: {digits}")
+print(f"空格: {spaces}")
+print(f"其他字符: {others}")
